@@ -1,0 +1,15 @@
+﻿---
+# AppId
+"AppId": "12345"
+# Logging
+"Logging":
+  "IncludeScopes": false
+  "LogLevel":
+    "Default": "Debug"
+    "System": "Information"
+    "Microsoft": "Information"
+# GrantTypes
+"GrantTypes":
+   - "authorization"
+   - "password"
+   - "client_credentials"
