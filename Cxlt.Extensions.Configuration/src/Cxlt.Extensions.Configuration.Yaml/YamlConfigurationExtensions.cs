@@ -42,7 +42,7 @@ namespace Microsoft.Extensions.Configuration
               });
         }
 
-        public static IConfigurationBuilder AddYamlFile(this IConfigurationBuilder builder, Action<YamlConfigurationSource> configureSource)
+        internal static IConfigurationBuilder AddYamlFile(this IConfigurationBuilder builder, Action<YamlConfigurationSource> configureSource)
         {
             var source = new YamlConfigurationSource();
             configureSource(source);

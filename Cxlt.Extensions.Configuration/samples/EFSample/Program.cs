@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EFSample
 {
@@ -18,7 +19,14 @@ namespace EFSample
                 });
 
 
+
+            var services = new ServiceCollection();
             
+
+
+
+            var serviceProvider = services.BuildServiceProvider();
+
 
 
 

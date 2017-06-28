@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Cxlt.Extensions.Configuration.Yaml
 {
-    public class YamlConfigurationProvider : FileConfigurationProvider
+    internal class YamlConfigurationProvider : FileConfigurationProvider
     {
         public YamlConfigurationProvider(FileConfigurationSource source) : base(source)
         {

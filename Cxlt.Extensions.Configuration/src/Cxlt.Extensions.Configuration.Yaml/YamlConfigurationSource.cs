@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Cxlt.Extensions.Configuration.Yaml
 {
-    public class YamlConfigurationSource : FileConfigurationSource
+    internal class YamlConfigurationSource : FileConfigurationSource
     {
         public override IConfigurationProvider Build(IConfigurationBuilder builder)
         {

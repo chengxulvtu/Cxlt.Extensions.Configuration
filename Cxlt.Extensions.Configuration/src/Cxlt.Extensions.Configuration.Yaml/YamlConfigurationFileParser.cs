@@ -7,7 +7,7 @@ using SharpYaml.Serialization;
 
 namespace Cxlt.Extensions.Configuration.Yaml
 {
-    public class YamlConfigurationFileParser
+    internal class YamlConfigurationFileParser
     {
         private readonly IDictionary<string, string> _data = new SortedDictionary<string, string>(StringComparer.Ordinal);
         private readonly Stack<string> _context = new Stack<string>();
