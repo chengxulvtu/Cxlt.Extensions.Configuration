@@ -7,18 +7,19 @@ namespace Cxlt.Extensions.Configuration.EF
 {
     internal class EFConfigurationProvider : ConfigurationProvider
     {
-        Action<DbContextOptionsBuilder> OptionsAction { get; }
-        DbContextOptionsBuilder<ConfigurationDbContext> Builder { get; } = new DbContextOptionsBuilder<ConfigurationDbContext>();
+        Action<EFConfigurationOptionsBuilder> OptionsAction { get; }
 
-        public EFConfigurationProvider(Action<DbContextOptionsBuilder> optionsAction)
+
+        public EFConfigurationProvider(Action<EFConfigurationOptionsBuilder> optionsAction)
         {
             OptionsAction = optionsAction;
-            OptionsAction(Builder);
         }
 
         public override void Load()
         {
-            using (var ctx = new ConfigurationDbContext(Builder.Options))
+            var builder = new EFConfigurationOptionsBuilder();
+            OptionsAction(builder);
+            using (var ctx = new ConfigurationDbContext(builder))
             {
                 ctx.Database.EnsureCreated();
                 Data = ctx.Configurations.ToDictionary(t => t.Key, t => t.Value);

@@ -5,10 +5,11 @@ namespace Cxlt.Extensions.Configuration.EF
 {
     internal class ConfigurationDbContext : DbContext
     {
+        private EFConfigurationOptionsBuilder Builder { get; }
 
-        public ConfigurationDbContext(DbContextOptions<ConfigurationDbContext> options) : base(options)
+        public ConfigurationDbContext(EFConfigurationOptionsBuilder options) : base(options.DbContextOptions.Options)
         {
-
+            Builder = options;
         }
 
         public DbSet<Configuration> Configurations { get; set; }
@@ -17,9 +18,15 @@ namespace Cxlt.Extensions.Configuration.EF
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            
             modelBuilder.Entity<Configuration>(b =>
             {
+                if (!string.IsNullOrEmpty(Builder.TableName))
+                {
+                    b.Metadata.RemoveAnnotation("Relational:TableName");
+                    b.Metadata.AddAnnotation("Relational:TableName", Builder.TableName);
+                }
+
                 b.HasKey(t => t.Key);
                 b.Property(t => t.Key).ValueGeneratedNever();
             });

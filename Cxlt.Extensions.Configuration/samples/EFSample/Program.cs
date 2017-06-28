@@ -14,23 +14,28 @@ namespace EFSample
             var builder = new ConfigurationBuilder()
                 .AddEntityFramework(options =>
                 {
+                    options.TableName = "configs";
                     // 这里使用SQLite作为演示
-                    options.UseSqlite("Filename=config.db");
+                    options.DbContextOptions.UseSqlite("Filename=config.db");
                 });
 
 
 
             var services = new ServiceCollection();
-            
-
-
 
             var serviceProvider = services.BuildServiceProvider();
 
 
-
-
             Configuration = builder.Build();
+
+            Console.WriteLine(Configuration["AppId"]);
+            Console.WriteLine(Configuration["Logging:IncludeScopes"]);
+            Console.WriteLine(Configuration["Logging:LogLevel:Default"]);
+            Console.WriteLine(Configuration["Logging:LogLevel:System"]);
+            Console.WriteLine(Configuration["Logging:LogLevel:Microsoft"]);
+            Console.WriteLine(Configuration["GrantTypes:0:Name"]);
+            Console.WriteLine(Configuration["GrantTypes:1:Name"]);
+            Console.WriteLine(Configuration["GrantTypes:2:Name"]);
         }
     }
 }

@@ -6,9 +6,9 @@ namespace Cxlt.Extensions.Configuration.EF
 {
     internal class EFConfigurationSource : IConfigurationSource
     {
-        private readonly Action<DbContextOptionsBuilder> _optionsAction;
+        private readonly Action<EFConfigurationOptionsBuilder> _optionsAction;
 
-        public EFConfigurationSource(Action<DbContextOptionsBuilder> optionsAction)
+        public EFConfigurationSource(Action<EFConfigurationOptionsBuilder> optionsAction)
         {
             _optionsAction = optionsAction;
         }
