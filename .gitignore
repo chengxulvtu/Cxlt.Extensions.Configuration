@@ -211,3 +211,4 @@ _Pvt_Extensions/
 ModelManifest.xml
 bin
 obj
+.DS_Store

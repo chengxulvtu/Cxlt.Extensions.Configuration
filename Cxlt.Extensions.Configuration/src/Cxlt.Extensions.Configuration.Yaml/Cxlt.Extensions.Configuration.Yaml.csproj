@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <ReleaseVersion>1.1.2</ReleaseVersion>
+    <PackageId>Cxlt.Extensions.Configuration.Yaml</PackageId>
+    <PackageVersion>1.1.2</PackageVersion>
+    <Authors>chengxulvtu</Authors>
+    <PackageIconUrl>https://avatars2.githubusercontent.com/u/949848?v=3&amp;s=460</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/chengxulvtu/Cxlt.Extensions.Configuration</PackageProjectUrl>
+    <Title>Cxlt.Extensions.Configuration.Yaml</Title>
+    <Description>.NET Core configuration provider for yaml.</Description>
+    <PackageTags>.net core configuration</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

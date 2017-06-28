@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <ReleaseVersion>1.1.2</ReleaseVersion>
+    <PackageId>Cxlt.Extensions.Configuration.EF</PackageId>
+    <PackageVersion>1.1.2</PackageVersion>
+    <Authors>chengxulvtu</Authors>
+    <Description>.NET Core configuration provider for EF</Description>
+    <PackageIconUrl>https://avatars2.githubusercontent.com/u/949848?v=3&amp;s=460</PackageIconUrl>
+    <PackageTags>.net core configuration</PackageTags>
+    <Title>Clxt.Extensions.Configuration.EF</Title>
   </PropertyGroup>
 
   <ItemGroup>
