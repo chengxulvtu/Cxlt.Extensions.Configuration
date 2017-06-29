@@ -9,7 +9,6 @@ namespace Cxlt.Extensions.Configuration.EF
     {
         Action<EFConfigurationOptionsBuilder> OptionsAction { get; }
 
-
         public EFConfigurationProvider(Action<EFConfigurationOptionsBuilder> optionsAction)
         {
             OptionsAction = optionsAction;

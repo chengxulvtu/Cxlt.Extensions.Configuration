@@ -20,13 +20,12 @@ namespace EFSample
                 });
 
 
+            Configuration = builder.Build();
 
             var services = new ServiceCollection();
 
             var serviceProvider = services.BuildServiceProvider();
 
-
-            Configuration = builder.Build();
 
             Console.WriteLine(Configuration["AppId"]);
             Console.WriteLine(Configuration["Logging:IncludeScopes"]);

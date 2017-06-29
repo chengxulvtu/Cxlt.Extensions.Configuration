@@ -16,8 +16,8 @@ namespace YamlSample
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddYamlFile("appsettings.yaml")
-                .AddYamlFile("array.yaml");
+                .AddYamlFile("appsettings.yml")
+                .AddYamlFile("array.yml");
 
 
             Configuration = builder.Build();
