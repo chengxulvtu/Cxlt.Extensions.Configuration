@@ -21,7 +21,7 @@ dotnet add package Cxlt.Extensions.Configuration.EF
 
 ## Cxlt.Extensions.Configuration.Yaml
 
-Yaml是很多大型开源项目都使用的配置文件格式，本项目实现了在.NET Core程序中读取Yaml文件配置，详细的实现过程可以参考下面的文章。
+Yaml是很多大型开源项目都使用的配置文件格式，本项目实现了在.NET Core程序中读取Yaml文件配置，详细的实现过程可以参考下面的文章。
 
 [实现自己的.NET Core配置Provider之Yaml](http://www.chengxulvtu.com/2017/06/29/custom-net-core-configuration-provider-for-yaml.html)
 
