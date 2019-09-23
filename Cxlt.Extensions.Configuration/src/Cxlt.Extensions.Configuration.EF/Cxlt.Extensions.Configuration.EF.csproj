@@ -1,10 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <ReleaseVersion>1.1.2</ReleaseVersion>
-    <PackageId>Cxlt.Extensions.Configuration.EF</PackageId>
-    <PackageVersion>1.1.2</PackageVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.2.0</Version>
     <Authors>chengxulvtu</Authors>
     <Description>.NET Core configuration provider for EF</Description>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/949848?v=3&amp;s=460</PackageIconUrl>
@@ -13,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
   </ItemGroup>
 </Project>

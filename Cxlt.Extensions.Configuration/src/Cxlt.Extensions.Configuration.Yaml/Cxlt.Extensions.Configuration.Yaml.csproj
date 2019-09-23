@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <ReleaseVersion>1.1.2</ReleaseVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>2.2.0</Version>
     <PackageId>Cxlt.Extensions.Configuration.Yaml</PackageId>
-    <PackageVersion>1.1.2</PackageVersion>
     <Authors>chengxulvtu</Authors>
     <PackageIconUrl>https://avatars2.githubusercontent.com/u/949848?v=3&amp;s=460</PackageIconUrl>
     <PackageProjectUrl>https://github.com/chengxulvtu/Cxlt.Extensions.Configuration</PackageProjectUrl>
@@ -14,8 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="1.1.2" />
-    <PackageReference Include="SharpYaml" Version="1.6.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="SharpYaml" Version="1.6.5" />
   </ItemGroup>
 
   <ItemGroup>
